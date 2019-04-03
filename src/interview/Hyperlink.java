@@ -25,15 +25,6 @@ public class Hyperlink {
 	System.out.println(find.getAttribute("href"));
 	WebElement url=driver.findElement(By.linkText("Verify am I broken?"));
 	
-	 
-     HttpURLConnection h = (HttpURLConnection) ((URL) url).openConnection();
-     h.setRequestMethod("GET");
-     h.connect();
-     System.out.println(h.getResponseCode());
-     if (h.getResponseCode() != 404) {
-         isValid = true;
-     }
- } 
 	
 	Thread.sleep(3000);
 	driver.quit();
